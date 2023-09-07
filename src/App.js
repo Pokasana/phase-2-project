@@ -1,25 +1,10 @@
 import React from 'react';
 import Header from './Header';
 import ListContainer from './ListContainer';
+import AddNewLocation from './AddNewLocation';
 
 function App() {
 
-  function AddNewLocation() {
-    return (
-      <div className="add-new">
-        <form>
-          <label for="name">Location Name:</label>
-          <input type="text" id="newName"></input>
-          <label for="address">Address:</label>
-          <input type="text" id="newAddress"></input>
-          <label for="category">Category:</label>
-          <input type="text" id="newCategory"></input>
-
-          <input type="submit" value="Submit"></input>
-        </form>
-      </div>
-    )
-  };
 
   function MyList() {
     return (
