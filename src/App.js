@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
 function App() {
 
@@ -27,7 +26,8 @@ function App() {
     return (
       <div className="list-container">
         <p>Let's explore</p>
-        <label for="category">Choose location:</label>
+        <div className="filter">
+        <label for="category">Choose category:</label>
 
         <select id="category">
           <option value="all">All</option>
@@ -36,6 +36,8 @@ function App() {
           <option value="shopping">Shopping</option>
           <option value="Beaches">Beaches</option>
         </select>
+
+        </div>
       </div>
     )
   };
