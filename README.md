@@ -27,3 +27,16 @@ User can filter the list by chosing categories from below:\
  ### `Register their email to receive coupons`
 
  Users can register their email address to receive news letters.
+
+<!-- Structures
+    index.js
+        - App.js
+            - Header
+                - Navbar
+                - SignUp?
+            - ListContainer
+                - ListCards
+                - Filter
+            - AddNew
+            - My List
+-->
