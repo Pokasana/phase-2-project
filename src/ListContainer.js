@@ -1,9 +1,24 @@
 import React from 'react';
 
 function ListContainer() {
+
+  function Card() {
+    return (
+      <ul className="locationCard">
+        <li>Location Name</li>
+        <li>Location Address</li>
+        <li className="card-category">Category: category</li>
+        <button>Get coupon</button>
+      </ul>
+    )
+  }
+
     return (
       <div className="list-container">
         <p>Let's explore</p>
+
+        <Card />
+
         <div className="filter">
         <label for="category">Choose category:</label>
 
