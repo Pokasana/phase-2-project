@@ -27,7 +27,6 @@ function ListContainer() {
           <option value="restaurant">Restaurant</option>
           <option value="activity">Activity</option>
           <option value="shopping">Shopping</option>
-          <option value="Beaches">Beaches</option>
         </select>
 
         </div>

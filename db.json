@@ -1,19 +1,62 @@
-{
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
+[
+  {
+    "id": 1,
+    "name": "Waioli Kitchen",
+    "address": "2950 Manoa Rd",
+    "category": "restaurant"
+  },
+  {
+    "id": 2,
+    "name": "Aloha Salads",
+    "address": "Waialae Avenue # 7050",
+    "category": "restaurant"
+  },
+  {
+    "id": 3,
+    "name": "Ono Seafood",
+    "address": "747 Kapahulu Ave",
+    "category": "restaurant"
+  },
+  {
+    "id": 4,
+    "name": "Kualoa Ranch",
+    "address": "Kaneohe",
+    "category": "activity"
+  },
+  {
+    "id": 5,
+    "name": "Port Waikiki Cruises",
+    "address": "2005 Kalia Rd",
+    "category": "activity"
+  },
+  {
+    "id": 6,
+    "name": "Coral SUP Yoga",
+    "address": "193 Paoa Pl",
+    "category": "activity"
+  },
+  {
+    "id": 7,
+    "name": "AGS Honolulu",
+    "address": "2017 S King St",
+    "category": "shopping"
+  },
+  {
+    "id": 8,
+    "name": "Harbors Vintage",
+    "address": "1269 S Beretania St",
+    "category": "shopping"
+  },
+  {
+    "id": 9,
+    "name": "Jana Lam Hawaii",
+    "address": "1170 Auahi St Suite 133",
+    "category": "shopping"
+  },
+  {
+    "id": 10,
+    "name": "Paiko",
+    "address": "675 Auahi St Suite 127",
+    "category": "shopping"
   }
-}
+]

@@ -14,7 +14,7 @@ Users can browse the list and check out the details of each location.
 ### `Filter the list by category`
 
 User can filter the list by chosing categories from below:\
- - Restaurants / Activities / Shopping / Beaches
+ - Restaurants / Activities / Shopping
 
  ### `Add new locations to the list`
 
