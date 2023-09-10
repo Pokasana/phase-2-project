@@ -14,14 +14,12 @@ function App() {
     .then((data) => setLocationList(data))
   }, []);
   
-  console.log(locationList);
-
   return (
     <div className="App">
       <Header />
       <Switch>
         <Route exact path="/">
-          <ListContainer />
+          <ListContainer locationList={locationList} />
         </Route>
         <Route path="/add">
           <AddNewLocation />

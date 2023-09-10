@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ListContainer() {
+function ListContainer({ locationList }) {
 
   function Card() {
     return (
@@ -15,12 +15,14 @@ function ListContainer() {
 
     return (
       <div className="list-container">
-        <p>Let's explore</p>
-
-        <Card />
+        <p>Let's explore!</p>
+        {locationList.map(location => {
+          const { id, name, address, category } = location;
+          return <Card key={id} name={name} address={address} category={category} />
+        })}
 
         <div className="filter">
-        <label for="category">Choose category:</label>
+        <label>Choose category:</label>
 
         <select id="category">
           <option value="all">All</option>
