@@ -1,17 +1,8 @@
 import React from 'react';
+import Card from './Card';
 
 function ListContainer({ locationList }) {
 
-  function Card() {
-    return (
-      <ul className="locationCard">
-        <li>Location Name</li>
-        <li>Location Address</li>
-        <li className="card-category">Category: category</li>
-        <button>Get coupon</button>
-      </ul>
-    )
-  }
 
     return (
       <div className="list-container">
