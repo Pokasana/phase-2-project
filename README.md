@@ -35,8 +35,9 @@ User can filter the list by chosing categories from below:\
                 - Navbar
                 - SignUp?
             - ListContainer
-                - ListCards
+                - Card
                 - Filter
             - AddNew
             - My List
+                - Card
 -->

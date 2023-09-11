@@ -14,13 +14,17 @@ function App() {
     .then((r) => r.json())
     .then((data) => setLocationList(data))
   }, []);
+
+  const handleClick = () => {
+
+  }
   
   return (
     <div className="App">
       <Header />
       <Switch>
         <Route exact path="/">
-          <ListContainer locationList={locationList} />
+          <ListContainer locationList={locationList}  />
         </Route>
         <Route path="/add">
           <AddNewLocation />

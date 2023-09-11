@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import Filter from './Filter';
 
-function ListContainer({ locationList }) {
+function ListContainer({ locationList, addToMyList }) {
 
     return (
       <div className="list-container">
@@ -10,7 +10,12 @@ function ListContainer({ locationList }) {
 
         {locationList.map(location => {
           const { id, name, address, category } = location;
-          return <Card key={id} name={name} address={address} category={category} />
+          return (
+            <div>
+              <Card key={id} name={name} address={address} category={category} />
+              <button onClick={addToMyList}>Add to my list</button>
+            </div>
+            )
         })};
 
       </div>
