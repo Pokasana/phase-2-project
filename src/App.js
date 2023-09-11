@@ -7,6 +7,7 @@ import MyList from './MyList';
 
 function App() {
   const [locationList, setLocationList] = useState([]);
+  const [addedLocations, setAddedLocations] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/loactions")
@@ -25,7 +26,7 @@ function App() {
           <AddNewLocation />
         </Route>
         <Route path="/mylist">
-          <MyList />
+          <MyList myList={addedLocations} />
         </Route>
       </Switch>
     </div>

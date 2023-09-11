@@ -1,15 +1,14 @@
 import React from 'react';
+import Card from './Card';
 
-function MyList() {
+function MyList({ myList }) {
+
     return (
       <div className="myList">
-      <h3>My List</h3>
-      <ul className="locationCard">
-        <li>Location Name</li>
-        <li>Location Address</li>
-        <li>Category: category</li>
-        <button>Get coupon</button>
-      </ul>
+        <h3>My List</h3>
+        {myList === true
+          ? myList.map(location => <Card key={location.id} />) : <p>Add locations to your list!</p>
+        }
       </div>
     )
   };

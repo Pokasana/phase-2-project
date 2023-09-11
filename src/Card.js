@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Card() {
+function Card({ name, address, category }) {
     return (
       <ul className="locationCard">
-        <li>Location Name</li>
-        <li>Location Address</li>
-        <li className="card-category">Category: category</li>
+        <li>{name}</li>
+        <li>{address}</li>
+        <li className="card-category">Category: {category.charAt(0).toUpperCase() + category.slice(1)}</li>
         <button>Get coupon</button>
       </ul>
     )
