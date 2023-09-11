@@ -5,6 +5,10 @@ function Header() {
     return (
       <header>
         <h1>Visit Honolulu</h1>
+        <p>
+          Here are recommended places to visit by travellers for travellers.<br></br>
+          Please add your recommendations to the list if it's not in the list!
+        </p>
         <NavBar />
       </header>
     )

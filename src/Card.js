@@ -6,7 +6,7 @@ function Card({ name, address, category }) {
         <li>{name}</li>
         <li>{address}</li>
         <li className="card-category">Category: {category.charAt(0).toUpperCase() + category.slice(1)}</li>
-        <button>Get coupon</button>
+        <button>Add to my list</button>
       </ul>
     )
   }
