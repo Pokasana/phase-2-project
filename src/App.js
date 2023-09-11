@@ -15,16 +15,18 @@ function App() {
     .then((data) => setLocationList(data))
   }, []);
 
-  const handleClick = () => {
+  const handleClick = (location) => {
+    setAddedLocations([...addedLocations, location]);
+  };
 
-  }
+  console.log(addedLocations);
   
   return (
     <div className="App">
       <Header />
       <Switch>
         <Route exact path="/">
-          <ListContainer locationList={locationList}  />
+          <ListContainer locationList={locationList} addToMyList={handleClick}  />
         </Route>
         <Route path="/add">
           <AddNewLocation />

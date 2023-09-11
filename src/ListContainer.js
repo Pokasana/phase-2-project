@@ -11,9 +11,9 @@ function ListContainer({ locationList, addToMyList }) {
         {locationList.map(location => {
           const { id, name, address, category } = location;
           return (
-            <div>
-              <Card key={id} name={name} address={address} category={category} />
-              <button onClick={addToMyList}>Add to my list</button>
+            <div key={id}>
+              <Card name={name} address={address} category={category} />
+              <button onClick={() => addToMyList(location)}>Add to my list</button>
             </div>
             )
         })};
