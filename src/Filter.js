@@ -3,7 +3,7 @@ import React from 'react';
 function Filter() {
     return (
         <div className="filter">
-            <label>Choose category:</label>
+            <label htmlFor="category-filter">Filter by category:</label>
 
             <select id="category">
             <option value="all">All</option>

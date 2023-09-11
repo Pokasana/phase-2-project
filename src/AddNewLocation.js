@@ -4,11 +4,11 @@ function AddNewLocation() {
     return (
       <div className="add-new">
         <form>
-          <label for="name">Location Name:</label>
+          <label htmlFor="name">Location Name:</label>
           <input type="text" id="newName"></input>
-          <label for="address">Address:</label>
+          <label htmlFor="address">Address:</label>
           <input type="text" id="newAddress"></input>
-          <label for="category">Category:</label>
+          <label htmlFor="category">Category:</label>
           <input type="text" id="newCategory"></input>
 
           <input type="submit" value="Submit"></input>
