@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useHistory } from 'react-router-dom';
 import Header from './Header';
 import ListContainer from './ListContainer';
 import AddNewLocation from './AddNewLocation';
@@ -16,17 +16,17 @@ function App() {
   }, []);
 
   const handleClick = (location) => {
-    setAddedLocations([...addedLocations, location]);
+    if (!addedLocations.includes(location)) {
+      setAddedLocations([...addedLocations, location])
+    }
   };
-
-  console.log(addedLocations);
   
   return (
     <div className="App">
       <Header />
       <Switch>
         <Route exact path="/">
-          <ListContainer locationList={locationList} addToMyList={handleClick}  />
+          <ListContainer locationList={locationList} addToMyList={handleClick} />
         </Route>
         <Route path="/add">
           <AddNewLocation />

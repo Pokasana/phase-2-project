@@ -1,8 +1,10 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import Card from './Card';
 import Filter from './Filter';
 
 function ListContainer({ locationList, addToMyList }) {
+  const history = useHistory();
 
     return (
       <div className="list-container">
@@ -13,7 +15,12 @@ function ListContainer({ locationList, addToMyList }) {
           return (
             <div key={id}>
               <Card name={name} address={address} category={category} />
-              <button onClick={() => addToMyList(location)}>Add to my list</button>
+              <button onClick={() =>{
+                addToMyList(location)
+                history.push('/mylist')
+                }}
+              >Add to my list
+              </button>
             </div>
             )
         })};
