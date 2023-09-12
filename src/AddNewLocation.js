@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function AddNewLocation() {
+  const [formData, setFormData] = useState({
+    name: "",
+    address: "",
+    category: ""
+  });
+
+  console.log(formData);
+
     return (
       <div className="add-new">
         <form>
