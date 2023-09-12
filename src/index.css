@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  color: #454545;
 }
 
 code {
@@ -15,4 +16,42 @@ code {
 
 li {
   list-style: none;
-};
+}
+
+header {
+  margin: 10px 10px auto;
+}
+
+h1 {
+  background-color: #6495ED;
+  color: white;
+}
+
+.locationCard {
+  background-color: #ccccff;
+  width: 300px;
+  display: inline-block;
+  margin: 10px 50px;
+  padding: 5px 0px 10px;
+}
+
+.navBar {
+  padding: 10px;
+}
+
+a {
+  padding: 10px;
+}
+
+button {
+  color: #454545
+}
+
+label, input {
+  margin: 10px;
+}
+
+h3 {
+  background-color: #40E0D0;
+  margin: 10px 50px;
+}

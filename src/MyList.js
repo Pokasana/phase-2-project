@@ -8,7 +8,7 @@ function MyList({ myList }) {
       <div className="myList">
         <h3>My List</h3>
         {myList.length > 0
-          ? myList.map(location => <Card key={location.id} name={location.name} address={location.address} category={location.category} />)
+          ? myList.map(location => <div className="locationCard" key={location.id} ><Card name={location.name} address={location.address} category={location.category} /></div>)
           : <Link to="/">Add locations to your list!</Link>
         }
       </div>

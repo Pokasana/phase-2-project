@@ -4,7 +4,7 @@ function Card({ name, address, category }) {
 
 
     return (
-      <ul className="locationCard">
+      <ul >
         <li>{name}</li>
         <li>{address}</li>
         <li className="card-category">Category: {category.charAt(0).toUpperCase() + category.slice(1)}</li>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Header from './Header';
 import ListContainer from './ListContainer';
 import AddNewLocation from './AddNewLocation';
