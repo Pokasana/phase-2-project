@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 function AddNewLocation({ addNewLocation }) {
   const [formData, setFormData] = useState({
@@ -6,6 +7,8 @@ function AddNewLocation({ addNewLocation }) {
     address: "",
     category: ""
   });
+
+  const history = useHistory();
 
   const handleInput = (e) => {
     const name = e.target.name;
@@ -21,13 +24,14 @@ function AddNewLocation({ addNewLocation }) {
 
     return (
       <div className="add-new">
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(e) => {handleSubmit(e); history.push('/')}}>
           <label htmlFor="name">Location Name:</label>
           <input type="text" id="newName" name="name" onChange={handleInput}></input><br></br>
           <label htmlFor="address">Address:</label>
           <input type="text" id="newAddress" name="address" onChange={handleInput}></input><br></br>
           <label htmlFor="category">Category:</label>
           <select id="newCategory" name="category" onChange={handleInput}>
+            <option>- Select category -</option>
             <option value="restaurant">Restaurant</option>
             <option value="activity">Activity</option>
             <option value="shopping">Shopping</option>
