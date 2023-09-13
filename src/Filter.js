@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Filter() {
+function Filter({ handleChange }) {
+
     return (
         <div className="filter">
             <label htmlFor="category-filter">Filter by category:</label>
 
-            <select id="category">
+            <select id="category" onChange={handleChange}>
             <option value="all">All</option>
             <option value="restaurant">Restaurant</option>
             <option value="activity">Activity</option>

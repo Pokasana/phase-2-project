@@ -6,14 +6,19 @@ import AddNewLocation from './AddNewLocation';
 import MyList from './MyList';
 
 function App() {
+  const [locations, setLocations] = useState([]);
   const [locationList, setLocationList] = useState([]);
   const [addedLocations, setAddedLocations] = useState([]);
+
   const history = useHistory();
 
   useEffect(() => {
     fetch("http://localhost:3000/locations")
     .then((r) => r.json())
-    .then((data) => setLocationList(data))
+    .then((data) => {
+      setLocationList(data);
+      setLocations(data);
+    })
   }, []);
 
   const handleClick = (location) => {
@@ -36,15 +41,20 @@ function App() {
     })
   };
 
-  //on submit, i would like to post a new data to the API
-  //and also add the data into the internal data on React to render it on the DOM
-  
+  const handleChange = (e) => {
+    const filterBy = e.target.value;
+    if (filterBy !== 'all') {
+      const newArr = locations.filter(location => location.category === filterBy);
+      setLocationList(newArr);
+    } else setLocationList(locations);
+};
+
   return (
     <div className="App">
       <Header />
       <Switch>
         <Route exact path="/">
-          <ListContainer locationList={locationList} addToMyList={handleClick} />
+          <ListContainer locationList={locationList} addToMyList={handleClick} handleChange={handleChange} />
         </Route>
         <Route path="/add">
           <AddNewLocation addNewLocation={handleSubmit} />

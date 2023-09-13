@@ -3,12 +3,12 @@ import { useHistory } from 'react-router-dom';
 import Card from './Card';
 import Filter from './Filter';
 
-function ListContainer({ locationList, addToMyList }) {
+function ListContainer({ locationList, addToMyList, handleChange }) {
   const history = useHistory();
 
     return (
       <div className="list-container">
-        <Filter />
+        <Filter handleChange={handleChange} />
 
         {locationList.map(location => {
           const { id, name, address, category } = location;
@@ -23,7 +23,7 @@ function ListContainer({ locationList, addToMyList }) {
               </button>
             </div>
             )
-        })};
+        })}
 
       </div>
     )
