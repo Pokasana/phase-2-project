@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AddNewLocation() {
+function AddNewLocation({ addNewLocation }) {
   const [formData, setFormData] = useState({
     name: "",
     address: "",
@@ -8,21 +8,32 @@ function AddNewLocation() {
   });
 
   const handleInput = (e) => {
-    console.log(e.target.value);
-    console.log(e.target.name);
+    const name = e.target.name;
+    const value = e.target.value;
+    setFormData({...formData, [name]: value})
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newItem = {...formData};
+    addNewLocation(newItem);
   };
 
     return (
       <div className="add-new">
-        <form>
+        <form onSubmit={handleSubmit}>
           <label htmlFor="name">Location Name:</label>
           <input type="text" id="newName" name="name" onChange={handleInput}></input><br></br>
           <label htmlFor="address">Address:</label>
           <input type="text" id="newAddress" name="address" onChange={handleInput}></input><br></br>
           <label htmlFor="category">Category:</label>
-          <input type="text" id="newCategory" name="category" onChange={handleInput}></input><br></br>
+          <select id="newCategory" name="category" onChange={handleInput}>
+            <option value="restaurant">Restaurant</option>
+            <option value="activity">Activity</option>
+            <option value="shopping">Shopping</option>
+          </select><br></br>
 
-          <input type="submit" value="Submit"></input>
+          <input type="submit" value="Submit" ></input>
         </form>
       </div>
     )
