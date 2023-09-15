@@ -8,6 +8,11 @@ function ListContainer({ locationList, addToMyList, handleChange }) {
 
     return (
       <div className="list-container">
+        <h4>
+          Here are recommended places to visit by travellers for travellers.<br></br>
+          Please add your recommendations to the list if you don't see it!
+        </h4>
+
         <Filter handleChange={handleChange} />
 
         {locationList.map(location => {

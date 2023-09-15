@@ -20,24 +20,6 @@ User can filter the list by chosing categories from below:\
 
  On the "Add Location" page, users can add new locations to the list.
 
- ### `Create an own wish list for places to visit`
+ ### `Create a My List by adding locations from the list`
 
  By clicking "Add to my list" button, users can add the location to their own wish list.
-
- ### `Register their email to receive coupons`
-
- Users can register their email address to receive news letters.
-
-<!-- Structures
-    index.js
-        - App.js
-            - Header
-                - Navbar
-                - SignUp?
-            - ListContainer
-                - Card
-                - Filter
-            - AddNew
-            - My List
-                - Card
--->
