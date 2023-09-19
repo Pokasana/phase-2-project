@@ -24,7 +24,7 @@ function AddNewLocation({ addNewLocation }) {
 
     return (
       <div className="add-new">
-        <form outocomplete="off" onSubmit={(e) => {handleSubmit(e); history.push('/')}}>
+        <form autocomplete="off" onSubmit={(e) => {handleSubmit(e); history.push('/')}}>
           <label htmlFor="name">Location Name:</label>
           <input type="text" id="newName" name="name" onChange={handleInput}></input><br></br>
           <label htmlFor="address">Address:</label>

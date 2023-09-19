@@ -59,6 +59,24 @@
       "name": "Paiko",
       "address": "675 Auahi St Suite 127",
       "category": "shopping"
+    },
+    {
+      "name": "Ono Seafood",
+      "address": "747 Kalakaua Ave",
+      "category": "restaurant",
+      "id": 11
+    },
+    {
+      "name": "Ono Seafood",
+      "address": "747 Kalakaua Ave",
+      "category": "restaurant",
+      "id": 12
+    },
+    {
+      "name": "Ono Seafood",
+      "address": "747 Kalakaua Ave",
+      "category": "restaurant",
+      "id": 13
     }
   ]
 }
