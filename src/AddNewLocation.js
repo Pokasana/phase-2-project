@@ -20,17 +20,24 @@ function AddNewLocation({ addNewLocation }) {
     e.preventDefault();
     const newItem = {...formData};
     addNewLocation(newItem);
+    setFormData({
+      name: "",
+      address: "",
+      category: ""
+    })
   };
+
+  // 
 
     return (
       <div className="add-new">
-        <form autocomplete="off" onSubmit={(e) => {handleSubmit(e); history.push('/')}}>
+        <form autocomplete="off" onSubmit={(e) => {handleSubmit(e); history.push('/') }}>
           <label htmlFor="name">Location Name:</label>
-          <input type="text" id="newName" name="name" onChange={handleInput}></input><br></br>
+          <input type="text" id="newName" name="name" value={formData.name} onChange={handleInput}></input><br></br>
           <label htmlFor="address">Address:</label>
-          <input type="text" id="newAddress" name="address" onChange={handleInput}></input><br></br>
+          <input type="text" id="newAddress" name="address" value={formData.address} onChange={handleInput}></input><br></br>
           <label htmlFor="category">Category:</label>
-          <select id="newCategory" name="category" onChange={handleInput}>
+          <select id="newCategory" name="category" value={formData.category} onChange={handleInput}>
             <option>- Select category -</option>
             <option value="restaurant">Restaurant</option>
             <option value="activity">Activity</option>

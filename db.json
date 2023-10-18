@@ -61,22 +61,34 @@
       "category": "shopping"
     },
     {
-      "name": "Ono Seafood",
-      "address": "747 Kalakaua Ave",
+      "name": "Hawaii Sushi",
+      "address": "465 Kapiolani ",
       "category": "restaurant",
       "id": 11
     },
     {
-      "name": "Ono Seafood",
-      "address": "747 Kalakaua Ave",
+      "name": "Donut shop",
+      "address": "test",
       "category": "restaurant",
       "id": 12
     },
     {
-      "name": "Ono Seafood",
-      "address": "747 Kalakaua Ave",
+      "name": "test",
+      "address": "test",
       "category": "restaurant",
       "id": 13
+    },
+    {
+      "name": "test",
+      "address": "test",
+      "category": "",
+      "id": 14
+    },
+    {
+      "name": "test",
+      "address": "test",
+      "category": "restaurant",
+      "id": 15
     }
   ]
 }
